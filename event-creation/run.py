@@ -1,4 +1,4 @@
 import os
-
-os.system("python3 manage.py collectstatic")
-os.system("python3 manage.py runserver")
+os.system("pip install django")
+os.system("python manage.py collectstatic")
+os.system("python manage.py runserver")
