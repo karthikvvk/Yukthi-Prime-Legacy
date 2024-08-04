@@ -1,0 +1,1 @@
+Run the "run.py" to INSTALL and RUN the APP in SERVER
