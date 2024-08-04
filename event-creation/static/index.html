@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Create Event</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+    </head>
+    <body>
+        <h1 class="head1">Create Event</h1>
+        <div class="fullmain">
+            <form
+                method="post"
+                action="{% url 'my_form' %}"
+                enctype="multipart/form-data"
+            >
+                {% csrf_token %}
+                <table class="tb">
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="eventName">Event Name</label>
+                                <input
+                                    type="text"
+                                    id="eventName"
+                                    name="eventName"
+                                    required
+                                />
+                            </div>
+                        </th>
+                        <th>
+                            <div class="form-group">
+                                <label for="venue">Venue</label>
+                                <input
+                                    type="text"
+                                    id="venue"
+                                    name="venue"
+                                    required
+                                />
+                            </div>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="dateTime">Date and Time</label>
+                                <input
+                                    type="datetime-local"
+                                    id="dateTime"
+                                    name="dateTime"
+                                    required
+                                />
+                            </div>
+                        </th>
+                        <th>
+                            <div class="form-group">
+                                <label for="duration">Duration</label>
+                                <input
+                                    type="text"
+                                    id="duration"
+                                    name="duration"
+                                />
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="guest">Guest Speaker(s)</label>
+                                <input type="text" id="guest" name="guest" />
+                            </div>
+                        </th>
+                        <th>
+                            <div class="form-group">
+                                <label for="motto"
+                                    >Motto/Moral/Subject/Agenda</label
+                                >
+                                <input type="text" id="motto" name="motto" />
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="targetAudience"
+                                    >Target Audience</label
+                                >
+                                <input
+                                    type="text"
+                                    id="targetAudience"
+                                    name="targetAudience"
+                                />
+                            </div>
+                        </th>
+                        <th>
+                            <div class="form-group">
+                                <label for="description"
+                                    >Event Description</label
+                                >
+                                <textarea
+                                    id="description"
+                                    name="description"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="organizer">Organizer</label>
+                                <input
+                                    type="text"
+                                    id="organizer"
+                                    name="organizer"
+                                />
+                            </div>
+                        </th>
+                        <th>
+                            <div class="form-group">
+                                <label for="registrationDetails"
+                                    >Registration Details</label
+                                >
+                                <textarea
+                                    id="registrationDetails"
+                                    name="registrationDetails"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="contactInfo"
+                                    >Contact Information</label
+                                >
+                                <input
+                                    type="text"
+                                    id="contactInfo"
+                                    name="contactInfo"
+                                />
+                            </div>
+                        </th>
+                        <th>
+                            <div class="form-group">
+                                <label for="eventImage">Event Image</label>
+                                <input
+                                    type="file"
+                                    id="eventImage"
+                                    name="eventImage"
+                                />
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="sponsors">Sponsors</label>
+                                <input
+                                    type="text"
+                                    id="sponsors"
+                                    name="sponsors"
+                                />
+                            </div>
+                        </th>
+                        <th>
+                            <div class="form-group">
+                                <label for="dressCode">Dress Code</label>
+                                <input
+                                    type="text"
+                                    id="dressCode"
+                                    name="dressCode"
+                                />
+                            </div>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label for="behavioralExpectations"
+                                    >General Instructions:</label
+                                >
+                                <textarea
+                                    id="behavioralExpectations"
+                                    name="behavioralExpectations"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                        </th>
+                        <th></th>
+                    </tr>
+                </table>
+                <div class="form-group">
+                    <button type="submit">Create Event</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

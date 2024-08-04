@@ -1,0 +1,11 @@
+# myproject/urls.py
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home),
+    path('admin/', admin.site.urls),
+    path('myform/', views.my_form_view, name='my_form'),
+    
+]

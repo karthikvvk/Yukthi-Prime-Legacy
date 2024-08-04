@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style1.css' %}" />
+    </head>
+    <body>
+        <div class="main_div">
+            <div class="sub_img">
+                <img class="imga" src="{% static img %}" alt="image" />
+            </div>
+
+            <div class="sub_text">
+                {% for key, value in events.items %}
+                    {% if value %}
+                        <h3>{{ key }}: {{ value }}</h3>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            
+            <img src="{% static 'editpen.svg' %}" alt="Edit" class="edit">
+            
+        </div>
+    </body>
+</html>
